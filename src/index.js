@@ -1,11 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './components/principal/App';
+import "./index.css"
+import "./style/App.scss"
+
+//Context
+import { provider, ProviderComposer } from './context/Compose'
+import UserProvider from './context/users/UserProvider'
+import ProfileProvider from './context/profile/ProfileProvider'
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ProviderComposer
+        providers={[
+            provider(UserProvider),
+            provider(ProfileProvider)
+        ]}
+    >
+        <App/>
+    </ProviderComposer>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
