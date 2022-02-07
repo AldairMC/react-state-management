@@ -1,9 +1,9 @@
 import React from "react";
 
-const User = ({ id }) => {
+const User = ({ user }) => {
     return (
         <div>
-            From User {id}
+            From User {user.email}
         </div>
     )
 }

@@ -1,6 +1,9 @@
 import React, { useReducer } from "react";
 import axios from 'axios';
 
+//types
+import { GET_USERS } from "../types";
+
 //Reducers 
 import UserReducer from "./UserReducer";
 import UserContext from '../users/UserContext';
@@ -12,15 +15,14 @@ const UserProvider = props => {
         users: []
     }
 
-    const [ userState ] = useReducer(UserReducer, initialState)
+    const [ userState, dispatch ] = useReducer(UserReducer, initialState)
 
     const getUsers = async () => {
         const users = await axios.get(`${REACT_APP_URI}/users`)
-        // dispatch({
-        //     type: "ALDAIR",
-        //     playload: users
-        // })
-        console.log(users)
+        dispatch({
+            type: GET_USERS,
+            payload: users.data.data
+        })
     }
 
     return (

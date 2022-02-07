@@ -6,7 +6,7 @@ import UserContext from "../../context/users/UserContext";
 import User from "./User";
 
 const Users = () => {
-    const { getUsers } = useContext(UserContext)
+    const { users, getUsers } = useContext(UserContext)
 
     useEffect(() => {
         getUsers()
@@ -15,10 +15,10 @@ const Users = () => {
     return (
         <div>
             {
-                [1, 2, 3, 4].map(key => (
+                users.map((user, key) => (
                     <User 
                         {...{ key }}
-                        id={key}
+                        user={user}
                     />
                 ))
             }
