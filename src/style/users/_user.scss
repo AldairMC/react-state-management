@@ -1,0 +1,10 @@
+._user_container_ {
+    display: flex;
+    height: 100px;
+    flex-direction: row;
+    border: 1px solid black;
+
+    img {
+        border-radius: 50%;
+    }
+}
