@@ -13,7 +13,7 @@ const Users = () => {
     }, [])
 
     return (
-        <div>
+        <div className="_users_container_">
             {
                 users.map((user, key) => (
                     <User 

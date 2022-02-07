@@ -1,5 +1,6 @@
-._principal_container_ {
+._users_container_ {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 600px;
+    column-gap: 30px;
+    row-gap: 30px;
 }
