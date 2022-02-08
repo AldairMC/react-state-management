@@ -2,4 +2,4 @@
 
 ### reack hooks context
 ### redux
-### Michine state
+### State machine
