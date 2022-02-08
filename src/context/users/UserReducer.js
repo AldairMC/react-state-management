@@ -10,8 +10,6 @@ export default (state, action) => {
                 users: payload
             }
         default:
-            return {
-                ...state
-            } 
+            return state
     }
 }

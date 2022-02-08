@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from "react";
-// import AppContext from "../../context/AppContext";
 import UserContext from "../../context/users/UserContext";
 
 //componets

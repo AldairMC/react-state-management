@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 100%;
     text-align: center;
-    padding: 10px 0 10px 0px;
+    padding: 20px 0 20px 0px;
     border: 1px solid rgba(#c2c2c2, 0.2);
 
     img {
@@ -13,6 +13,6 @@
 
     &:hover {
         border-radius: 10px;
-        box-shadow: rgba(gray, 0.6) 0px 7px 29px 0px;
+        box-shadow: rgba(#c2c2c2, 0.6) 0px 7px 29px 0px;
     }
 }

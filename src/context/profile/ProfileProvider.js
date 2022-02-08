@@ -1,6 +1,9 @@
 import React, { useReducer } from "react";
 import axios from 'axios';
 
+//Type
+import { GET_PROFILE } from "../types";
+
 //Reducers 
 import ProfileReducer from "./ProfileReducer";
 import ProfileContext from '../profile/ProfileContext';
@@ -12,15 +15,14 @@ const ProfileProvider = props => {
         userSelected: null
     }
 
-    const [ profileState ] = useReducer(ProfileReducer, initialState)
+    const [ profileState, dispatch ] = useReducer(ProfileReducer, initialState)
 
     const getUserSelected = async (id) => {
         const userSelected = await axios.get(`${REACT_APP_URI}/users/${id}`)
-        // dispatch({
-        //     type: "ALDAIR",
-        //     playload: users
-        // })
-        console.log(userSelected)
+        dispatch({
+            type: GET_PROFILE,
+            payload: userSelected.data.data
+        })
     }
 
     return (
