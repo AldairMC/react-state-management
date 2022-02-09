@@ -4,6 +4,7 @@ import React from "react";
 import Users from "../users/Users";
 import Profile from "../profile/Profile";
 import Navbar from "../navbar/Navbar";
+import Pagination from "../pagination/Pagination";
 
 const App = () => {
   return (
@@ -14,6 +15,9 @@ const App = () => {
       <div className="_container_user_profile_">
         <Users />
         <Profile />
+      </div>
+      <div className="_container_pagination_">
+        <Pagination />
       </div>
     </div>
   );
