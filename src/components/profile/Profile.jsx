@@ -18,7 +18,8 @@ const Profile = () => {
                     <span className="_name_profile_selected_">{userSelected.first_name} {userSelected.last_name}</span>
                     <span className="_email_profile_selected_">{userSelected.email}</span>
                 </span>
-            : <>No user selected</>}
+            : <span className="_container_profile_not_selected_">No user selected</span>
+            }
         </div>
     )
 }
