@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 import axios from 'axios';
 
 //Type
-import { GET_PROFILE } from "../types";
+import { GET_PROFILE, CLEAN_USER_SELECTED } from "../types";
 
 //Reducers 
 import ProfileReducer from "./ProfileReducer";
@@ -25,10 +25,18 @@ const ProfileProvider = props => {
         })
     }
 
+    const cleanUserSelected = () => {
+        dispatch({
+            type: CLEAN_USER_SELECTED,
+            payload: null
+        })
+    }
+
     return (
         <ProfileContext.Provider value={{
             userSelected: profileState.userSelected,
-            getUserSelected
+            getUserSelected,
+            cleanUserSelected
         }}>
             { props.children }
         </ProfileContext.Provider>

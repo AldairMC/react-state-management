@@ -1,0 +1,11 @@
+._navbar_container_ {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  ._navbar_logo_ {
+    font-size: 28px;
+    align-self: center;
+    padding-left: 25px;
+    cursor: pointer;
+  }
+}
