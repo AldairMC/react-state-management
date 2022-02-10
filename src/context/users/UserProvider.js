@@ -27,17 +27,16 @@ const UserProvider = props => {
     }
 
     const changePag = async key => {
-        const users = await axios.get(`${REACT_APP_URI}/users?page=${userState.pag}`)
-        dispatch([
-            {
-                type: GET_USERS,
-                payload: users.data.data
-            },
-            {
-                type: CHANGE_PAG,
-                payload: key
+        const pag_actual = userState.pag + key
+        const pag = (pag_actual <= 0)? 1 : pag_actual
+        const users = await axios.get(`${REACT_APP_URI}/users?page=${pag}`)
+        dispatch({
+            type: CHANGE_PAG,
+            payload: {
+                "users": users.data.data, 
+                "pagina": pag
             }
-        ])
+        })
     }
 
     return (

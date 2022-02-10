@@ -12,7 +12,8 @@ export default (state, action) => {
         case CHANGE_PAG:
             return {
                 ...state,
-                pag: payload
+                users: payload.users,
+                pag: payload.pagina
             }
         default:
             return state
