@@ -1,0 +1,19 @@
+._user_container_ {
+    display: grid;
+    grid-template-columns: 100%;
+    text-align: center;
+    padding: 20px 0 20px 0px;
+    border: 1px solid rgba(#c2c2c2, 0.2);
+    cursor: pointer;
+
+    img {
+        padding-bottom: 10px;
+        justify-self: center;
+        border-radius: 50%;
+    }
+
+    &:hover {
+        border-radius: 10px;
+        box-shadow: rgba(#c2c2c2, 0.6) 0px 7px 29px 0px;
+    }
+}

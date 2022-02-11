@@ -1,0 +1,24 @@
+._pagination_container_ {
+    justify-self: center;
+    align-self: center;
+
+    %_button_pag_ {
+        border: 1px solid #c2c2c2;
+        padding: 5px 30px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(#c2c2c2, 0.2);
+        }
+    }
+
+    ._button_prev_ {
+        @extend %_button_pag_;
+        border-radius: 5px 0 0 5px;
+    }
+
+    ._button_next_ {
+        @extend %_button_pag_;
+        border-radius: 0 5px 5px 0;
+    }
+}
